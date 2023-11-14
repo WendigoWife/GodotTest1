@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b40r70pxar06h"]
+
+[ext_resource type="Script" path="res://Rock.cs" id="1_vk4hr"]
+[ext_resource type="Texture2D" uid="uid://i3meqy5l4rld" path="res://imgs/angry.png" id="2_6vp3v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_242f4"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Rock" type="Area2D" parent="."]
+self_modulate = Color(1, 0, 1, 1)
+top_level = true
+position = Vector2(100, 100)
+scale = Vector2(10, 10)
+script = ExtResource("1_vk4hr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock"]
+self_modulate = Color(1, 0, 1, 1)
+shape = SubResource("RectangleShape2D_242f4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rock"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_6vp3v")
